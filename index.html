@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ABSADIK NETTRUST NIGERIA | Simple Learning</title>
+<title>ABSADIK NETTRUST NIGERIA | Professional Study Notes</title>
 <style>
 :root { --navy: #0A192F; --navy-light: #112240; --teal: #00B4D8; --cyan: #90E0EF; --white: #FFFFFF; --text: #E2E8F0; --muted: #8892B0; --border: rgba(255,255,255,0.1); --radius: 12px; --green: #2A9D8F; --orange: #F4A261; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,15 +48,14 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
 .mod-header { margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
 .mod-header h1 { font-size: 2rem; color: var(--teal); margin-bottom: 10px; }
 
-.acc-btn { width: 100%; text-align: left; background: var(--navy-light); border: 1px solid var(--border); color: var(--cyan); padding: 15px 20px; font-size: 1.1rem; font-weight: 700; border-radius: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; cursor: pointer; }
-.acc-btn:hover { background: rgba(0, 180, 216, 0.1); border-color: var(--teal); }
-.acc-content { display: none; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-top: none; padding: 25px; border-radius: 0 0 8px 8px; margin-top: -10px; margin-bottom: 15px; font-size: 1rem; color: #cbd5e1; }
-.acc-content.active { display: block; }
-.acc-content ul { margin-left: 20px; margin-bottom: 15px; }
-.acc-content p { margin-bottom: 15px; }
-.highlight { color: var(--orange); font-weight: bold; }
+.lesson-note { background: #172A45; border-left: 5px solid var(--teal); border-radius: 8px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.lesson-note h3 { color: var(--cyan); margin-bottom: 15px; font-size: 1.25rem; }
+.lesson-note p { font-size: 1rem; margin-bottom: 15px; color: var(--text); text-align: justify; }
+.lesson-note ul { margin-left: 20px; margin-bottom: 15px; color: var(--text); }
+.lesson-note li { margin-bottom: 8px; }
+.lesson-note .example { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 6px; color: #b0c4de; border-left: 3px solid var(--orange); margin-top: 15px; font-style: italic; }
 
-.tool-box { background: rgba(0, 180, 216, 0.05); border: 2px dashed var(--teal); border-radius: var(--radius); padding: 25px; margin-top: 30px; }
+.tool-box { background: rgba(0, 180, 216, 0.05); border: 2px dashed var(--teal); border-radius: var(--radius); padding: 25px; margin-top: 40px; }
 .tool-box h4 { margin-bottom: 15px; font-size: 1.2rem; color: var(--white); }
 .form-group { margin-bottom: 15px; }
 .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--cyan); font-size: 0.95rem; }
@@ -76,7 +75,7 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
 }
 </style>
 </head>
-<body>
+  <body>
 <header>
   <div class="container nav-wrap">
     <div class="logo" onclick="showPage('home-view')">
@@ -93,24 +92,24 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
 <div id="home-view" class="view-section active">
   <section class="hero">
     <div class="container">
-      <h1>Learn Digital Skills in Simple English</h1>
-      <p>No big grammar. Learn how to protect yourself, use AI, and understand your internet rights.</p>
-      <button class="btn btn-primary" onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})">Start Learning Now</button>
+      <h1>Professional Digital Education</h1>
+      <p>Read our comprehensive study notes on digital rights, AI, and cybersecurity. Understand the concepts, then test your knowledge.</p>
+      <button class="btn btn-primary" onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})">Start Reading</button>
     </div>
   </section>
 
   <section class="section alt-bg" id="modules">
     <div class="container">
-      <h2 style="text-align:center; margin-bottom:30px;">Choose a Topic to Learn</h2>
+      <h2 style="text-align:center; margin-bottom:30px;">Select a Learning Module</h2>
       <div class="grid">
-        <div class="card" onclick="showPage('mod1')"><div class="card-icon">🤖</div><h3>1. AI Ownership</h3><p>Learn how AI works and who owns the pictures it draws.</p><div class="card-link">Start Learning →</div></div>
-        <div class="card" onclick="showPage('mod2')"><div class="card-icon">©️</div><h3>2. Creator Rights</h3><p>Learn how to stop people from stealing your videos and songs.</p><div class="card-link">Start Learning →</div></div>
-        <div class="card" onclick="showPage('mod3')"><div class="card-icon">📶</div><h3>3. Data Cost</h3><p>Learn how to save your data and stop wasting money.</p><div class="card-link">Start Learning →</div></div>
-        <div class="card" onclick="showPage('mod4')"><div class="card-icon">🗣️</div><h3>4. Internet Rules</h3><p>Learn who makes the rules for the internet and how to speak up.</p><div class="card-link">Start Learning →</div></div>
-        <div class="card" onclick="showPage('mod5')"><div class="card-icon">🛡️</div><h3>5. Scam Protection</h3><p>Learn how to spot fake bank messages and avoid hackers.</p><div class="card-link">Start Learning →</div></div>
-        <div class="card" onclick="showPage('mod6')"><div class="card-icon">🎓</div><h3>6. Digital Skills</h3><p>Learn skills to make money online.</p><div class="card-link">Start Learning →</div></div>
-        <div class="card" onclick="showPage('mod7')"><div class="card-icon">📊</div><h3>7. Internet Data</h3><p>Learn how data is used to solve youth problems.</p><div class="card-link">Start Learning →</div></div>
-        <div class="card" onclick="showPage('mod8')"><div class="card-icon">💡</div><h3>8. Innovation</h3><p>Learn how to create solutions for your community.</p><div class="card-link">Start Learning →</div></div>
+        <div class="card" onclick="showPage('mod1')"><div class="card-icon">🤖</div><h3>1. AI & Ownership</h3><p>Understand how AI generates content and the complex rules of copyright ownership.</p><div class="card-link">Read Notes →</div></div>
+        <div class="card" onclick="showPage('mod2')"><div class="card-icon">©️</div><h3>2. Creator Rights</h3><p>Learn about copyright protection, platform risks, and securing your digital assets.</p><div class="card-link">Read Notes →</div></div>
+        <div class="card" onclick="showPage('mod3')"><div class="card-icon">📶</div><h3>3. Data Cost</h3><p>Understand the digital divide and calculate the percentage of income spent on data.</p><div class="card-link">Read Notes →</div></div>
+        <div class="card" onclick="showPage('mod4')"><div class="card-icon">🗣️</div><h3>4. Internet Rules</h3><p>Learn about internet governance, digital rights, and advocating for better policies.</p><div class="card-link">Read Notes →</div></div>
+        <div class="card" onclick="showPage('mod5')"><div class="card-icon">🛡️</div><h3>5. Scam Protection</h3><p>Study the psychology of cybercriminals, phishing, and securing your accounts.</p><div class="card-link">Read Notes →</div></div>
+        <div class="card" onclick="showPage('mod6')"><div class="card-icon">🎓</div><h3>6. Digital Skills</h3><p>Explore the skills required for the modern digital economy and entrepreneurship.</p><div class="card-link">Read Notes →</div></div>
+        <div class="card" onclick="showPage('mod7')"><div class="card-icon">📊</div><h3>7. Observatory</h3><p>Discover how data collection can be used to solve youth internet challenges.</p><div class="card-link">Read Notes →</div></div>
+        <div class="card" onclick="showPage('mod8')"><div class="card-icon">💡</div><h3>8. Innovation</h3><p>Learn the design thinking process to build solutions for community problems.</p><div class="card-link">Read Notes →</div></div>
       </div>
     </div>
   </section>
@@ -119,60 +118,62 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
 <div id="mod1" class="view-section">
   <div class="container module-page">
     <button class="back-btn" onclick="showPage('home-view')">← Back to Home</button>
-    <div class="mod-header"><h1>1. AI Opportunity & Ownership</h1><p>Simple English Lesson</p></div>
+    <div class="mod-header"><h1>1. AI Opportunity & Ownership</h1><p>Please read the study notes carefully before taking the assessment.</p></div>
     
-    <div class="acc-btn" onclick="toggleAcc('acc1-1')">📖 Step 1: What is AI? (Think of a smart parrot) <span>▼</span></div>
-    <div class="acc-content" id="acc1-1">
-      <p>Imagine a parrot that has read every book in the world. If you ask it a question, it can answer you. But the parrot doesn't actually <em>understand</em> what it is saying—it just knows what words usually follow each other.</p>
-      <p>That is how <strong>Artificial Intelligence (AI)</strong> like ChatGPT works. It is a computer program that guesses the next word based on what it has read before.</p>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: Understanding Artificial Intelligence</h3>
+      <p>Artificial Intelligence (AI) refers to computer systems designed to perform tasks that normally require human intelligence. These tasks include learning, problem-solving, and decision-making. Tools like ChatGPT and Midjourney analyze vast amounts of existing data to predict and generate new text, images, or code.</p>
+      <p>It is important to understand that AI does not "think" creatively like a human. It operates on algorithms and patterns. When you give it a prompt, it calculates the most likely response based on its training data.</p>
     </div>
 
-    <div class="acc-btn" onclick="toggleAcc('acc1-2')">⚠️ Step 2: Who owns what AI creates? <span>▼</span></div>
-    <div class="acc-content" id="acc1-2">
-      <p>If you ask AI to "Draw a dog," and it draws one, can you sell it and say you are the artist? <span class="highlight">The law says NO.</span> Because a machine drew it, you cannot claim you own it. It is like taking a photo of someone else's painting.</p>
-      <p>But, if you tell the AI exactly how to draw the dog (e.g., "Draw a brown dog with a blue hat sitting under a mango tree"), and you use Photoshop to fix the dog's eyes... now you have added your own human work. You have a better chance of owning it!</p>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 2: The Complex Issue of AI Ownership</h3>
+      <p>Copyright law traditionally protects the original work of a human creator. If you ask an AI to generate an image or write an essay with minimal input, you generally <strong>cannot</strong> claim legal copyright ownership of that output, because a machine produced it.</p>
+      <p>However, human contribution is key. If you spend significant time writing detailed prompts, refining the output, and editing the final result (for example, using Photoshop to modify an AI-generated image), you are adding human authorship. This may give you a stronger claim to ownership, but it depends heavily on the specific AI tool's Terms of Service.</p>
+      <div class="example">Practical Example: If you type "draw a house" and post the result, you likely do not own it. If you write a 3-paragraph prompt detailing the architectural style, lighting, and landscaping, and then manually correct errors in the image, you have contributed significant human effort.</div>
     </div>
 
     <div class="tool-box">
-      <h4>🛠️ Test Yourself</h4>
+      <h4>🛠️ Assessment: Based on the Notes</h4>
       <div class="form-group">
-        <label>You type "Draw a car" into AI and post it. Do you own the copyright?</label>
+        <label>You type "Draw a car" into an AI and post it. Do you own the copyright?</label>
         <select id="ai-q1">
-          <option value="no">No, because the machine did most of the work.</option>
-          <option value="yes">Yes, because I typed the words.</option>
+          <option value="no">No, because the machine did the work without significant human authorship.</option>
+          <option value="yes">Yes, because I typed the prompt.</option>
         </select>
       </div>
-      <button class="btn btn-primary" onclick="checkAI()">Check Answer</button>
+      <button class="btn btn-primary" onclick="checkAI()">Submit Answer</button>
       <div id="ai-res" class="result-box"></div>
     </div>
   </div>
-  <div id="mod2" class="view-section">
+  </div>
+    <div id="mod2" class="view-section">
   <div class="container module-page">
     <button class="back-btn" onclick="showPage('home-view')">← Back to Home</button>
-    <div class="mod-header"><h1>2. Creator Rights & Protection</h1><p>Simple English Lesson</p></div>
+    <div class="mod-header"><h1>2. Creator Rights & Protection</h1><p>Please read the study notes carefully before taking the assessment.</p></div>
     
-    <div class="acc-btn" onclick="toggleAcc('acc2-1')">📖 Step 1: Copyright is like baking a cake <span>▼</span></div>
-    <div class="acc-content" id="acc2-1">
-      <p>If you bake a cake, the cake belongs to you. You don't need to go to the government to register the cake. The same applies to your songs, photos, and videos. The moment you make it, <span class="highlight">it is yours.</span></p>
-      <p>If someone steals your cake and starts selling it, they are breaking the law. For creators, if someone downloads your video and posts it as their own, they are stealing your work.</p>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: Copyright Principles</h3>
+      <p>Copyright is a legal right that grants the creator of an original work exclusive rights to its use and distribution. In Nigeria and internationally, this protection is automatic the moment your work is saved in a tangible format (like recording a song or saving a video file). You do not need to register it with the government to own it.</p>
+      <p>However, in the digital age, content theft is common. If someone downloads your video and reposts it without permission, they are infringing on your copyright. To prove ownership, you must keep your original project files (e.g., the raw footage, the .PSD file, or the original voice note).</p>
     </div>
 
-    <div class="acc-btn" onclick="toggleAcc('acc2-2')">🔒 Step 2: How to lock your account <span>▼</span></div>
-    <div class="acc-content" id="acc2-2">
-      <p>Hackers want to steal your account to scam your followers. If you use a simple password like "123456", they will guess it in seconds.</p>
-      <p>You must turn on <strong>2FA (Two-Factor Authentication)</strong>. This means even if a hacker gets your password, the app will send a secret code to your phone. Without that code, they cannot enter.</p>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 2: Account Security and 2FA</h3>
+      <p>Creators are frequent targets for hackers who want to steal their audience for scams. Using a simple or reused password makes you vulnerable. You must use Two-Factor Authentication (2FA).</p>
+      <p>2FA adds a second layer of security. Even if a hacker steals your password, they cannot log in without the unique code sent to your phone. It is the most effective way to protect your digital assets.</p>
     </div>
 
     <div class="tool-box">
-      <h4>🛠️ Test Yourself</h4>
+      <h4>🛠️ Assessment: Based on the Notes</h4>
       <div class="form-group">
-        <label>Someone stole your TikTok video. What is the smartest thing to do?</label>
+        <label>Someone stole your TikTok video and posted it as their own. What is the best professional action to take?</label>
         <select id="cr-q1">
-          <option value="report">Use the TikTok app to report them for Copyright.</option>
-          <option value="insult">Type bad words in their comment section.</option>
+          <option value="report">Use the platform's official Copyright Report tools to take it down.</option>
+          <option value="insult">Insult them in the comment section.</option>
         </select>
       </div>
-      <button class="btn btn-primary" onclick="checkCreator()">Check Answer</button>
+      <button class="btn btn-primary" onclick="checkCreator()">Submit Answer</button>
       <div id="cr-res" class="result-box"></div>
     </div>
   </div>
@@ -181,25 +182,25 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
 <div id="mod3" class="view-section">
   <div class="container module-page">
     <button class="back-btn" onclick="showPage('home-view')">← Back to Home</button>
-    <div class="mod-header"><h1>3. Internet Affordability</h1><p>Simple English Lesson</p></div>
+    <div class="mod-header"><h1>3. Internet Affordability</h1><p>Please read the study notes carefully before taking the assessment.</p></div>
     
-    <div class="acc-btn" onclick="toggleAcc('acc3-1')">📖 Step 1: Why is data so expensive? <span>▼</span></div>
-    <div class="acc-content" id="acc3-1">
-      <p>Imagine you get ₦1,000 as pocket money. If you spend ₦300 just to buy data, you only have ₦700 left for food. That is what many students face. This is called the <strong>Digital Divide</strong>—the gap between those who can afford the internet and those who cannot.</p>
-      <p>To save your money, use "Lite" apps (like Facebook Lite) which use less data. Turn off auto-play on videos, and download things when you are connected to free Wi-Fi.</p>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: The Digital Divide</h3>
+      <p>Internet affordability is a major challenge in Nigeria. When a significant portion of your monthly income is spent on data, it creates a "digital divide." This limits access to online education, remote jobs, and digital business opportunities.</p>
+      <p>To manage this, you must practice data-efficient browsing. This means turning off video autoplay, downloading files when connected to free Wi-Fi, and using "Lite" versions of applications which consume significantly less data.</p>
     </div>
 
     <div class="tool-box">
-      <h4>🧮 Calculate Your Data Cost</h4>
+      <h4>🧮 Calculator: Assess Your Data Burden</h4>
       <div class="form-group">
-        <label>How much money do you get in a month? (₦)</label>
+        <label>Approximate Monthly Income (₦)</label>
         <input type="number" id="income" placeholder="e.g. 50000">
       </div>
       <div class="form-group">
-        <label>How much do you spend on data in a month? (₦)</label>
+        <label>Monthly Data Spending (₦)</label>
         <input type="number" id="data-cost" placeholder="e.g. 10000">
       </div>
-      <button class="btn btn-primary" onclick="calcAfford()">Calculate & Learn</button>
+      <button class="btn btn-primary" onclick="calcAfford()">Calculate Percentage</button>
       <div id="aff-res" class="result-box"></div>
     </div>
   </div>
@@ -208,59 +209,88 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
 <div id="mod4" class="view-section">
   <div class="container module-page">
     <button class="back-btn" onclick="showPage('home-view')">← Back to Home</button>
-    <div class="mod-header"><h1>4. Youth Internet Governance</h1><p>Simple English Lesson</p></div>
+    <div class="mod-header"><h1>4. Youth Internet Governance</h1><p>Please read the study notes carefully before taking the assessment.</p></div>
     
-    <div class="acc-btn" onclick="toggleAcc('acc4-1')">📖 Step 1: Who owns the Internet? <span>▼</span></div>
-    <div class="acc-content" id="acc4-1">
-      <p>Nobody owns the internet, but there are <strong>rules</strong>. "Internet Governance" is just a big word for "The Rules of the Internet."</p>
-      <p>Right now, older people in government and big companies are making the rules. But they are not the ones using TikTok or struggling with data costs! If young people don't speak up, the rules will never favor us.</p>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: Internet Governance</h3>
+      <p>Internet Governance refers to the development and application of shared principles, norms, rules, and decision-making procedures that shape the evolution and use of the Internet. It involves governments, tech companies, and civil society.</p>
+      <p>Historically, youth have been excluded from these policy discussions. However, because young people are the primary users of the internet, their voices are essential. Advocating for digital rights, affordable data, and online safety ensures that policies reflect the reality of young Nigerians.</p>
     </div>
 
     <div class="tool-box">
-      <h4>🗣️ Speak Your Mind</h4>
-      <p>Write a message to the government about an internet problem you face.</p>
+      <h4>🗣️ Policy Action Tool</h4>
+      <p>Draft a professional recommendation for policymakers.</p>
       <div class="form-group">
-        <label>What is the problem?</label>
-        <select id="gov-issue"><option>Data is too expensive</option><option>Too many scammers online</option><option>Poor network connection</option></select>
+        <label>Select the Primary Issue</label>
+        <select id="gov-issue"><option>High Cost of Data</option><option>Online Harassment & Safety</option><option>Data Privacy & Consent</option></select>
       </div>
       <div class="form-group">
-        <label>What is your solution? (Write in simple English)</label>
-        <textarea id="gov-text" rows="2" placeholder="I suggest that the government..."></textarea>
+        <label>Your Recommendation</label>
+        <textarea id="gov-text" rows="3" placeholder="I recommend that the government..."></textarea>
       </div>
       <button class="btn btn-primary" onclick="genPolicy()">Generate Statement</button>
       <div id="gov-res" class="result-box"></div>
     </div>
   </div>
-  </div>
-  <div id="mod5" class="view-section">
+</div>
+    <div id="mod5" class="view-section">
   <div class="container module-page">
     <button class="back-btn" onclick="showPage('home-view')">← Back to Home</button>
-    <div class="mod-header"><h1>5. Cybersecurity & Safety</h1><p>Simple English Lesson</p></div>
+    <div class="mod-header"><h1>5. Cybersecurity & Safety</h1><p>Please read the study notes carefully before taking the assessment.</p></div>
     
-    <div class="acc-btn" onclick="toggleAcc('acc5-1')">📖 Step 1: How scammers trick you <span>▼</span></div>
-    <div class="acc-content" id="acc5-1">
-      <p>Scammers are like robbers who wear a police uniform. They pretend to be your bank, or a friend, to get your password. They want you to panic (e.g., "Your account will be blocked today!").</p>
-      <p><strong>Phishing</strong> is when they send you a fake link. If you click it, it looks like your bank's website, but it's a trap. If you enter your password, they will steal your money.</p>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: The Mechanics of Phishing</h3>
+      <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. Phishing is one of the most common methods used by cybercriminals. They use deceptive emails or text messages that appear to come from legitimate sources (like your bank) to trick you into revealing sensitive information, such as passwords or your BVN.</p>
+      <p>They rely on social engineering—creating a false sense of urgency or fear (e.g., "Your account will be blocked today!"). Financial institutions will never request sensitive information via a text link. Always access your bank services directly through their official application.</p>
     </div>
 
     <div class="tool-box">
-      <h4>🎣 Test Yourself</h4>
+      <h4>🎣 Assessment: Spot the Threat</h4>
       <div class="form-group">
-        <label>You get a text: "Your Bank: Your account is blocked. Click this link to enter your BVN." What do you do?</label>
+        <label>You receive a text message: "Your Bank: Your account is suspended. Click this link to verify your BVN immediately." What is the correct action?</label>
         <select id="cyber-q1">
           <option value="click">Click the link quickly and enter my BVN.</option>
-          <option value="safe">Ignore the link. Open my official Bank App instead.</option>
+          <option value="safe">Ignore the link. Open my official Bank App to check my status.</option>
         </select>
       </div>
-      <button class="btn btn-primary" onclick="checkCyber()">Check Answer</button>
+      <button class="btn btn-primary" onclick="checkCyber()">Submit Answer</button>
       <div id="cyber-res" class="result-box"></div>
     </div>
   </div>
 </div>
 
-<div id="mod6" class="view-section"><div class="container module-page"><button class="back-btn" onclick="showPage('home-view')">← Back</button><h1>6. Digital Skills</h1><p>Scrolling on TikTok is not a skill. A skill is learning how to design, code, or use AI to make money online.</p></div></div>
-<div id="mod7" class="view-section"><div class="container module-page"><button class="back-btn" onclick="showPage('home-view')">← Back</button><h1>7. Observatory</h1><p>We use anonymous data to show the government why they need to reduce data prices and improve internet safety.</p></div></div>
-<div id="mod8" class="view-section"><div class="container module-page"><button class="back-btn" onclick="showPage('home-view')">← Back</button><h1>8. Innovation Hub</h1><p>Learn how to spot a problem in your community and build a simple website or app to fix it.</p></div></div>
+<div id="mod6" class="view-section">
+  <div class="container module-page">
+    <button class="back-btn" onclick="showPage('home-view')">← Back</button>
+    <div class="mod-header"><h1>6. Digital Skills</h1></div>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: Digital Literacy</h3>
+      <p>Passive consumption of social media content is not a digital skill. True digital literacy involves the ability to use technology to solve problems and create economic value. This includes proficiency in productivity software (like Google Workspace), graphic design (like Canva), and understanding how to market products online.</p>
+    </div>
+  </div>
+</div>
+
+<div id="mod7" class="view-section">
+  <div class="container module-page">
+    <button class="back-btn" onclick="showPage('home-view')">← Back</button>
+    <div class="mod-header"><h1>7. Youth Internet Observatory</h1></div>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: Data for Policy</h3>
+      <p>Effective policy change requires evidence. By anonymously documenting the challenges youth face online (such as high data costs or cyberbullying), we create the data necessary to present to policymakers. This observatory acts as a mechanism to gather that evidence safely.</p>
+    </div>
+  </div>
+</div>
+
+<div id="mod8" class="view-section">
+  <div class="container module-page">
+    <button class="back-btn" onclick="showPage('home-view')">← Back</button>
+    <div class="mod-header"><h1>8. Innovation Hub</h1></div>
+    <div class="lesson-note">
+      <h3>📘 STUDY NOTE 1: Design Thinking</h3>
+      <p>Innovation begins with understanding a problem. The design thinking process involves: Empathizing (understanding the users), Defining the problem, Ideating (brainstorming solutions), Prototyping (building a simple version), and Testing. For example, creating a low-data educational platform is an innovative solution to the digital divide.</p>
+    </div>
+  </div>
+</div>
 
 <script>
   function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
@@ -270,15 +300,14 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
     window.scrollTo({ top: 0, behavior: 'smooth' });
     document.getElementById('navLinks').classList.remove('active');
   }
-  function toggleAcc(id) { document.getElementById(id).classList.toggle('active'); }
 
   function checkAI() {
     const ans = document.getElementById('ai-q1').value;
     const res = document.getElementById('ai-res');
     if(ans === 'no') {
-      res.innerHTML = "<span class='fb-learn'>✅ Correct! You are very smart.</span>Because the machine did the drawing, you cannot claim the copyright.<br><span class='fb-action'>💡 What to do next: If you want to own AI art, write long, detailed instructions and edit the picture yourself.</span>";
+      res.innerHTML = "<span class='fb-learn'>✅ Correct. You understand the concept.</span>Because the machine generated the image without significant human authorship, you cannot claim exclusive copyright.<br><span class='fb-action'>💡 Action: To claim ownership of AI-assisted work, you must add substantial human editing and modification.</span>";
     } else {
-      res.innerHTML = "<span class='fb-learn'>❌ Not quite.</span>Just typing short words is not enough to own the copyright.<br><span class='fb-action'>💡 What to do next: Read the rules of the AI app you are using.</span>";
+      res.innerHTML = "<span class='fb-learn'>❌ Incorrect.</span>Simply typing a short prompt does not constitute significant human authorship under copyright law.<br><span class='fb-action'>💡 Action: Review the Terms of Service of the AI tool you are using.</span>";
     }
     res.classList.add('show');
   }
@@ -287,9 +316,9 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
     const ans = document.getElementById('cr-q1').value;
     const res = document.getElementById('cr-res');
     if(ans === 'report') {
-      res.innerHTML = "<span class='fb-learn'>✅ Correct!</span>Reporting is the right way. Do not fight them in the comments.<br><span class='fb-action'>💡 What to do next: Always keep your original video files on your phone as proof that you made it first.</span>";
+      res.innerHTML = "<span class='fb-learn'>✅ Correct. Professional and effective.</span>Reporting through official channels is the legal way to resolve copyright infringement.<br><span class='fb-action'>💡 Action: Maintain a secure archive of your original project files to prove your authorship.</span>";
     } else {
-      res.innerHTML = "<span class='fb-learn'>❌ Wrong.</span>Insulting them might get YOUR account banned instead!<br><span class='fb-action'>💡 What to do next: Click the three dots on their video and select 'Report for Copyright Infringement'.</span>";
+      res.innerHTML = "<span class='fb-learn'>❌ Incorrect.</span>Engaging in public arguments can result in your own account being penalized.<br><span class='fb-action'>💡 Action: Use the platform's official copyright report form immediately.</span>";
     }
     res.classList.add('show');
   }
@@ -300,11 +329,11 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
     const res = document.getElementById('aff-res');
     if(isNaN(inc) || isNaN(cost) || inc <= 0) { res.innerHTML = "Please enter valid numbers."; res.classList.add('show'); return; }
     const perc = ((cost / inc) * 100).toFixed(1);
-    let msg = `<strong>You spend ${perc}% of your money on data.</strong><br><br>`;
+    let msg = `<strong>You spend ${perc}% of your income on internet access.</strong><br><br>`;
     if(perc > 15) {
-      msg += "<span class='fb-learn'>⚠️ That is too high!</span>You are spending too much just to browse.<br><span class='fb-action'>💡 What to do next: Download 'Facebook Lite' and 'WhatsApp Lite'. Turn off video auto-play on Instagram.</span>";
+      msg += "<span class='fb-learn'>⚠️ High Financial Burden.</span>Internet access is taking up a significant portion of your income.<br><span class='fb-action'>💡 Action: Implement low-data practices. Utilize Lite applications, disable background data, and download files when connected to Wi-Fi.</span>";
     } else {
-      msg += "<span class='fb-learn'>✅ That is okay.</span>You are managing your money well.<br><span class='fb-action'>💡 What to do next: Use your data to learn a digital skill so you can make more money online.</span>";
+      msg += "<span class='fb-learn'>✅ Manageable Burden.</span>Your internet expenditure is relatively balanced.<br><span class='fb-action'>💡 Action: Consider utilizing this connectivity to pursue advanced digital skills or online entrepreneurship.</span>";
     }
     res.innerHTML = msg; res.classList.add('show');
   }
@@ -313,9 +342,9 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
     const issue = document.getElementById('gov-issue').value;
     const text = document.getElementById('gov-text').value;
     const res = document.getElementById('gov-res');
-    if(text.trim().length < 5) { res.innerHTML = "Please write a short solution first."; res.classList.add('show'); return; }
-    const statement = `As a young Nigerian, I am worried about: ${issue}. My solution is: ${text}. Please listen to the youth.`;
-    res.innerHTML = `<strong>Your Message (Copy and send to leaders):</strong><br><br><textarea id="final-policy" rows="3" readonly style="background:var(--navy); color:var(--white); border:1px solid var(--teal); padding:10px; width:100%; border-radius:8px;">${statement}</textarea><br><br><button class="btn btn-primary" onclick="navigator.clipboard.writeText(document.getElementById('final-policy').value); this.innerText='Copied!'">Copy Message</button>`;
+    if(text.trim().length < 5) { res.innerHTML = "Please write a detailed recommendation."; res.classList.add('show'); return; }
+    const statement = `As a young Nigerian, I am deeply concerned about ${issue}. My recommendation is: ${text}. I urge policymakers to prioritize youth perspectives in these critical decisions.`;
+    res.innerHTML = `<strong>Generated Policy Statement:</strong><br><br><textarea id="final-policy" rows="4" readonly style="background:var(--navy); color:var(--white); border:1px solid var(--teal); padding:10px; width:100%; border-radius:8px;">${statement}</textarea><br><br><button class="btn btn-primary" onclick="navigator.clipboard.writeText(document.getElementById('final-policy').value); this.innerText='Copied to Clipboard!'">Copy Statement</button>`;
     res.classList.add('show');
   }
 
@@ -323,13 +352,12 @@ header { position: sticky; top: 0; z-index: 1000; background: rgba(10, 25, 47, 0
     const ans = document.getElementById('cyber-q1').value;
     const res = document.getElementById('cyber-res');
     if(ans === 'safe') {
-      res.innerHTML = "<span class='fb-learn'>✅ You are safe!</span>Banks will NEVER ask for your BVN on a text message. Opening your official app is the correct thing to do.<br><span class='fb-action'>💡 What to do next: Turn on Two-Factor Authentication (2FA) in your bank app settings right now.</span>";
+      res.innerHTML = "<span class='fb-learn'>✅ Correct. You avoided the trap.</span>Financial institutions will never ask you to click a link to verify sensitive information like a BVN.<br><span class='fb-action'>💡 Action: Ensure Two-Factor Authentication (2FA) is activated on all your financial and social media accounts.</span>";
     } else {
-      res.innerHTML = "<span class='fb-learn'>❌ Danger!</span>This is a scam. If you click and enter your BVN, they will clear your account.<br><span class='fb-action'>💡 What to do next: Delete the text message immediately. Never click links from strangers.</span>";
+      res.innerHTML = "<span class='fb-learn'>❌ Incorrect. This is a severe security risk.</span>This is a classic phishing attempt designed to steal your credentials.<br><span class='fb-action'>💡 Action: Delete the message. If you already clicked, change your passwords immediately and contact your bank.</span>";
     }
     res.classList.add('show');
   }
 </script>
 </body>
   </html>
-                                                                                                                                                                                                                 </div>
