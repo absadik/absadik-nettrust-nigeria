@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABSADIK NETTRUST NIGERIA</title>
+<meta name="description" content="Digital trust, AI opportunity, creator protection and internet governance platform for young Nigerians. Stage 1 prototype.">
+<meta name="theme-color" content="#08182b">
+<style>
+:root{--navy:#08182b;--navy2:#0d2237;--teal:#2ecfbd;--teal2:#17b3a3;--text:#e9f1f7;--muted:#a7bacb;--line:rgba(255,255,255,.13);--r:14px;--max:1120px;--h:64px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:hidden;font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--navy);background-image:radial-gradient(900px 480px at 12% -8%,rgba(23,179,163,.16),transparent 65%)}
+h1,h2,h3{line-height:1.22;margin:0 0 .6rem;font-weight:800;overflow-wrap:break-word}
+h1{font-size:clamp(1.8rem,6vw,3rem)}h2{font-size:clamp(1.4rem,4.4vw,2.1rem)}h3{font-size:clamp(1.05rem,3vw,1.25rem)}
+p{margin:0 0 1rem;overflow-wrap:break-word}p:last-child{margin:0}
+ul,ol{margin:0 0 1rem;padding-left:1.15rem}li{margin-bottom:.45rem}
+a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:4px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 1.15rem}
+.sec{padding:clamp(2.4rem,7vw,4.2rem) 0;scroll-margin-top:calc(var(--h) + 12px)}
+.alt{background:linear-gradient(180deg,rgba(13,34,55,.92),rgba(8,24,43,.92));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{max-width:62ch;margin-bottom:clamp(1.4rem,4vw,2.2rem)}.head p{color:var(--muted);margin:0}
+.eyebrow{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 .6rem}
+.lede{font-size:clamp(1rem,2.6vw,1.12rem);color:var(--muted)}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--teal2);color:#04211f;font-weight:800;padding:.7rem 1.1rem;border-radius:0 0 10px 0}
+.skip:focus{left:0}
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:var(--h)}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;padding:.35rem 0}
+.brand:hover{text-decoration:none}
+.mark{flex:0 0 auto;width:36px;height:36px;border-radius:9px;display:grid;place-items:center;font-size:.78rem;font-weight:900;color:#04211f;background:linear-gradient(135deg,var(--teal),var(--teal2))}
+.brand b{display:block;font-size:.9rem;line-height:1.15}
+.brand small{display:block;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tgl{display:none;align-items:center;gap:.5rem;min-height:44px;min-width:44px;padding:.5rem .7rem;border:1px solid rgba(255,255,255,.22);border-radius:10px;background:rgba(255,255,255,.04);color:#fff;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.bars{display:inline-flex;flex-direction:column;gap:3px;width:18px}
+.bars i{display:block;height:2px;background:currentColor;border-radius:2px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:.15rem}
+.nav a{display:block;padding:.55rem .7rem;border-radius:8px;font-size:.86rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.06);text-decoration:none}
+.nav a[aria-current="true"]{color:var(--navy);background:var(--teal)}
+@media(max-width:900px){
+.tgl{display:inline-flex}
+.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);border-bottom:1px solid var(--line);box-shadow:0 12px 32px rgba(0,0,0,.4);max-height:calc(100vh - var(--h));overflow-y:auto;padding:.5rem 1.15rem 1rem}
+.nav.open{display:block}
+.nav ul{flex-direction:column;align-items:stretch;gap:.15rem}
+.nav a{padding:.85rem .7rem;font-size:.98rem;border-bottom:1px solid rgba(255,255,255,.06);white-space:normal}
+.nav li:last-child a{border-bottom:0}
+}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.72rem 1.15rem;border-radius:10px;border:1px solid transparent;font-size:.92rem;font-weight:700;text-align:center;cursor:pointer}
+.btn:hover{text-decoration:none}
+.pri{background:linear-gradient(135deg,var(--teal),var(--teal2));color:#04211f}
+.gho{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.22);color:#fff}
+/* hero */
+.hero{padding:clamp(2.2rem,6vw,4rem) 0 clamp(2rem,5vw,3.2rem);scroll-margin-top:calc(var(--h) + 12px)}
+.hero-in{display:grid;gap:clamp(1.5rem,4vw,2.4rem);grid-template-columns:1fr;align-items:start}
+@media(min-width:940px){.hero-in{grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr)}}
+.acts{display:flex;flex-wrap:wrap;gap:.7rem;margin:0 0 1rem}
+.note{font-size:.8rem;color:var(--muted);margin:0}
+.panel{background:linear-gradient(180deg,rgba(18,48,73,.95),rgba(8,24,43,.95));border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:clamp(1.1rem,3.5vw,1.5rem);box-shadow:0 12px 32px rgba(0,0,0,.38)}
+.panel h2{font-size:1rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.9rem}
+.status{list-style:none;margin:0 0 1rem;padding:0}
+.status li{display:flex;gap:.6rem;align-items:flex-start;font-size:.89rem;margin-bottom:.65rem}
+.dot{flex:0 0 auto;width:10px;height:10px;margin-top:.45rem;border-radius:50%}
+.d1{background:var(--teal)}.d2{background:#f0b429}.d3{background:#7b8fa3}
+.panel .note{border-top:1px solid var(--line);padding-top:.85rem}
+/* notice */
+.warn{display:flex;gap:.8rem;align-items:flex-start;background:rgba(240,180,41,.09);border:1px solid rgba(240,180,41,.4);border-radius:var(--r);padding:1rem 1.1rem;margin:0 0 clamp(1.5rem,4vw,2.1rem)}
+.warn span{flex:0 0 auto;font-size:.66rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#2a1e00;background:#f0b429;border-radius:999px;padding:.25rem .55rem;margin-top:.15rem}
+.warn p{font-size:.87rem;color:#f2e4c4;margin:0}
+/* grids + cards */
+.grid{display:grid;gap:clamp(.9rem,2.6vw,1.25rem);grid-template-columns:1fr}
+@media(min-width:560px){.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))}}
+@media(min-width:760px){.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--r);padding:clamp(1rem,3.2vw,1.35rem)}
+.card h3{margin-bottom:.5rem}
+.card p,.card li{font-size:.9rem;color:var(--muted)}
+.card p{margin-bottom:.8rem}
+.st{font-size:.77rem;font-weight:700;color:#f0b429;border-top:1px solid var(--line);padding-top:.7rem;margin:0}
+@media(hover:hover) and (pointer:fine){.card:hover{border-color:rgba(46,207,189,.55)}}
+.badge{display:inline-block;font-size:.66rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;padding:.26rem .6rem;border-radius:999px;margin:0 0 .7rem;color:var(--teal);background:rgba(23,179,163,.13);border:1px solid rgba(23,179,163,.4)}
+.tnum{display:inline-block;font-size:.7rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.jump{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 clamp(1.2rem,3.5vw,1.8rem)}
+.jump a{font-size:.79rem;font-weight:600;color:var(--text);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:.45rem .8rem;min-height:34px}
+.jump a:hover{background:rgba(46,207,189,.14);border-color:rgba(46,207,189,.5);text-decoration:none}
+.mod{scroll-margin-top:calc(var(--h) + 14px)}
+/* solutions */
+.sol{display:flex;gap:.85rem;align-items:flex-start;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--r);padding:clamp(.9rem,3vw,1.15rem)}
+.num{flex:0 0 auto;width:32px;height:32px;display:grid;place-items:center;border-radius:9px;font-size:.85rem;font-weight:900;color:#04211f;background:linear-gradient(135deg,var(--teal),var(--teal2))}
+.sol h3{font-size:1rem;margin-bottom:.3rem}
+.sol p{font-size:.88rem;color:var(--muted);margin:0}
+/* about */
+.about{display:grid;gap:clamp(1.1rem,3.5vw,2rem);grid-template-columns:1fr}
+@media(min-width:880px){.about{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}}
+.facts{list-style:none;margin:0;padding:0}
+.facts li{display:flex;flex-direction:column;gap:.1rem;padding:.7rem 0;border-bottom:1px solid var(--line);font-size:.89rem}
+.facts li:last-child{border-bottom:0}
+.k{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.v{color:var(--text);font-weight:600}
+/* footer */
+.ftr{background:var(--navy);border-top:1px solid var(--line);padding:clamp(2rem,5vw,2.8rem) 0 1.5rem}
+.fgrid{display:grid;gap:clamp(1.3rem,4vw,2rem);grid-template-columns:1fr;margin-bottom:1.7rem}
+@media(min-width:720px){.fgrid{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}}
+.ftitle{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:0 0 .8rem;font-weight:900}
+.flinks{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+@media(min-width:480px){.flinks{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}}
+.flinks a{color:var(--muted);font-size:.86rem}
+.flinks a:hover{color:var(--teal)}
+.fbrand p{font-size:.86rem;color:var(--muted);max-width:46ch}
+.fbot{border-top:1px solid var(--line);padding-top:1.1rem;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between;font-size:.78rem;color:var(--muted)}
+.fbot p{margin:0}
+.fbot a{color:var(--muted)}.fbot a:hover{color:var(--teal)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#home">
+      <span class="mark" aria-hidden="true">AN</span>
+      <span><b>ABSADIK NETTRUST</b><small>Nigeria</small></span>
+    </a>
+    <button class="tgl" id="tgl" aria-expanded="false" aria-controls="nav">
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Menu</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#themes">Themes</a></li>
+        <li><a href="#modules">Modules</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="home">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">Stage 1 Prototype · Website Foundation</p>
+      <h1>Building a Safer, More Inclusive and Trustworthy Internet</h1>
+      <p class="lede">ABSADIK NETTRUST NIGERIA is a proposed mobile-first digital trust, AI opportunity, creator protection and internet governance platform focused on young Nigerians.</p>
+      <div class="acts">
+        <a class="btn pri" href="#modules">Explore the eight modules</a>
+        <a class="btn gho" href="#themes">NYIGF discussion themes</a>
+      </div>
+      <p class="note">Static website prototype · No login · No data collection · No backend · No AI API</p>
+    </div>
+    <aside class="panel" aria-labelledby="sh">
+      <h2 id="sh">Project status</h2>
+      <ul class="status">
+        <li><span class="dot d1" aria-hidden="true"></span><span><strong>Stage 1</strong> — website foundation (this page)</span></li>
+        <li><span class="dot d2" aria-hidden="true"></span><span><strong>Stage 2</strong> — module tools (planned, not built)</span></li>
+        <li><span class="dot d3" aria-hidden="true"></span><span><strong>Later stages</strong> — testing, review and release (planned)</span></li>
+      </ul>
+      <p class="note">Nothing on this page submits, stores or transmits personal information. All module features are clearly labelled as planned.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="sec alt" id="mission">
+  <div class="wrap">
+    <div class="warn" role="note">
+      <span>Prototype</span>
+      <p>This is a Stage 1 prototype website. The pages and navigation work, but the eight labs and centres are <strong>not yet functional</strong>. They are described here as planned features and will be built and tested in later stages.</p>
+    </div>
+    <div class="head">
+      <p class="eyebrow">Purpose</p>
+      <h2>Mission, vision and objectives</h2>
+      <p>A clear statement of what this project intends to do, and what it does not yet do.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card"><h3>Mission</h3><p>To build a professional, mobile-first digital trust, AI opportunity, creator protection and internet governance platform focused on young Nigerians.</p></article>
+      <article class="card"><h3>Vision</h3><p>A safer, more inclusive and trustworthy internet in which young Nigerians can learn, create, work and participate in decisions that shape their digital lives.</p></article>
+      <article class="card"><h3>Approach</h3><p>A lightweight static website that works on low-end Android phones, avoids unnecessary dependencies, and is honest about what has and has not been built.</p></article>
+    </div>
+    <div style="margin-top:clamp(1rem,3.5vw,1.6rem)">
+      <article class="card">
+        <h3>Objectives</h3>
+        <ol>
+          <li>Explain AI opportunity and ownership in plain language for young Nigerians.</li>
+          <li>Help creators understand basic rights, platform risk and where to report harm.</li>
+          <li>Raise awareness of internet affordability and access barriers.</li>
+          <li>Encourage meaningful youth participation in internet governance discussions.</li>
+          <li>Share practical cybersecurity and online safety guidance.</li>
+          <li>Organise digital skills learning pathways into one clear structure.</li>
+          <li>Provide a structured space for youth internet observation and collaboration.</li>
+        </ol>
+        <p class="st">Status: objectives stated for the project. Learning content and tools are planned.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="themes">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Discussion focus</p>
+      <h2>Four NYIGF discussion themes</h2>
+      <p>The project is organised around four discussion themes. These are framing topics for future content and conversation — they are not research findings, results or endorsements.</p>
+    </div>
+    <div class="grid g2">
+      <article class="card"><p class="tnum">Theme 01</p><h3>AI jobs and ownership</h3><p>How AI tools are changing the work young people do, who owns the data and the outputs produced with those tools, and what young Nigerians need to know to take part fairly.</p></article>
+      <article class="card"><p class="tnum">Theme 02</p><h3>Creator rights and platform risks</h3><p>The rights creators hold over their work, the risks of publishing on large platforms, and the practical steps creators can take when content is copied, misused or removed.</p></article>
+      <article class="card"><p class="tnum">Theme 03</p><h3>Internet affordability</h3><p>The cost of data and devices, the quality of connections, and how affordability shapes who can learn, work and participate online.</p></article>
+      <article class="card"><p class="tnum">Theme 04</p><h3>Youth internet governance</h3><p>How internet policy decisions are made, how young people can participate meaningfully, and how youth voices can be represented in governance processes.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="modules">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Planned structure</p>
+      <h2>Eight project modules</h2>
+      <p>Each module below is a planned part of the platform. No module tool is functional yet — every card states its status clearly.</p>
+    </div>
+    <nav class="jump" aria-label="Jump to a module">
+      <a href="#module-ai">1. AI &amp; Ownership</a>
+      <a href="#module-creator">2. Creator Rights</a>
+      <a href="#module-access">3. Affordability &amp; Access</a>
+      <a href="#module-governance">4. Youth Governance</a>
+      <a href="#module-safety">5. Cybersecurity &amp; Safety</a>
+      <a href="#module-skills">6. Digital Skills</a>
+      <a href="#module-observatory">7. Observatory</a>
+      <a href="#module-hub">8. Innovation Hub</a>
+    </nav>
+    <div class="grid g3">
+      <article class="card mod" id="module-ai">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>1. AI Opportunity &amp; Ownership Lab</h3>
+        <p>A planned learning space explaining how AI tools work, who owns data and outputs, and how young Nigerians can prepare for AI-shaped work.</p>
+        <ul><li>Planned: plain-language explainers on AI and ownership</li><li>Planned: guided reflection worksheets</li></ul>
+        <p class="st">Status: design stage — no interactive tool yet.</p>
+      </article>
+      <article class="card mod" id="module-creator">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>2. Creator Rights &amp; Protection Lab</h3>
+        <p>A planned guide to copyright basics, platform risk and the reporting routes available when a creator's work is copied or misused.</p>
+        <ul><li>Planned: creator rights checklists</li><li>Planned: explanation of common platform risks</li></ul>
+        <p class="st">Status: design stage — no interactive tool yet.</p>
+      </article>
+      <article class="card mod" id="module-access">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>3. Internet Affordability &amp; Access Lab</h3>
+        <p>A planned space for understanding data costs, device access and the everyday barriers that affect who can get online.</p>
+        <ul><li>Planned: data-cost awareness explainers</li><li>Planned: low-data usage tips</li></ul>
+        <p class="st">Status: design stage — no interactive tool yet.</p>
+      </article>
+      <article class="card mod" id="module-governance">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>4. Youth Internet Governance Lab</h3>
+        <p>A planned introduction to how internet policy discussions work and how young people can take part in them.</p>
+        <ul><li>Planned: explainers on governance processes</li><li>Planned: participation guidance for youth</li></ul>
+        <p class="st">Status: design stage — no interactive tool yet.</p>
+      </article>
+      <article class="card mod" id="module-safety">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>5. Cybersecurity &amp; Online Safety Centre</h3>
+        <p>A planned collection of practical safety guidance covering account security, scams, phishing and safer everyday online behaviour.</p>
+        <ul><li>Planned: safety guides and checklists</li><li>Planned: scam-awareness explainers</li></ul>
+        <p class="st">Status: design stage — no interactive tool yet.</p>
+      </article>
+      <article class="card mod" id="module-skills">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>6. Digital Skills Academy</h3>
+        <p>A planned structure that organises digital skills learning pathways into a clear, beginner-friendly sequence.</p>
+        <ul><li>Planned: learning pathway outlines</li><li>Planned: self-study resource lists</li></ul>
+        <p class="st">Status: design stage — no interactive tool yet.</p>
+      </article>
+      <article class="card mod" id="module-observatory">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>7. Youth Internet Observatory</h3>
+        <p>A planned space for structured observation of youth internet experiences and concerns. No data is collected at this stage.</p>
+        <p>A planned space for structured observation of youth internet experiences and concerns. No data is collected at this stage.</p>
+        <ul><li>Planned: observation framework outline</li><li>Planned: future reporting approach (to be reviewed)</li></ul>
+        <p class="st">Status: concept only — no statistics, findings or data collection.</p>
+      </article>
+      <article class="card mod" id="module-hub">
+        <p class="badge">Planned · Stage 2</p>
+        <h3>8. Innovation &amp; Collaboration Hub</h3>
+        <p>A planned space describing how young people, creators and organisations could collaborate on digital trust projects.</p>
+        <ul><li>Planned: collaboration model outline</li><li>Planned: project idea structure</li></ul>
+        <p class="st">Status: design stage — no interactive tool yet.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="solutions">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Proposed approach</p>
+      <h2>Proposed solutions</h2>
+      <p>These are proposals for how the project intends to respond to the four discussion themes. They describe intended direction, not delivered results.</p>
+    </div>
+    <div class="grid g2">
+      <div class="sol"><span class="num" aria-hidden="true">1</span><div><h3>Plain-language digital trust education</h3><p>Explain ownership, rights and safety in simple language and short formats that load quickly on low-end phones.</p></div></div>
+      <div class="sol"><span class="num" aria-hidden="true">2</span><div><h3>One organised platform instead of scattered information</h3><p>Group related topics into eight clear modules so that a young user can find guidance without searching across many unrelated sources.</p></div></div>
+      <div class="sol"><span class="num" aria-hidden="true">3</span><div><h3>Lightweight, low-data design</h3><p>No frameworks, no external APIs and no heavy media, so the site remains usable on slow connections and inexpensive devices.</p></div></div>
+      <div class="sol"><span class="num" aria-hidden="true">4</span><div><h3>Accessible by default</h3><p>Readable typography, keyboard-friendly navigation, clear headings and touch-friendly controls from the very first version.</p></div></div>
+      <div class="sol"><span class="num" aria-hidden="true">5</span><div><h3>Honest labelling of unfinished work</h3><p>Planned features are marked as planned. The project does not present unbuilt tools as working products.</p></div></div>
+      <div class="sol"><span class="num" aria-hidden="true">6</span><div><h3>Privacy-respecting foundation</h3><p>No accounts, no forms, no tracking and no personal data collection in this stage of the project.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="about">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Who is building this</p>
+      <h2>About ABSADIK TECH</h2>
+      <p>ABSADIK TECH is the developer name behind this project. The information below is limited to what has been stated for the project.</p>
+    </div>
+    <div class="about">
+      <div class="card">
+        <h3>The project team</h3>
+        <p>ABSADIK NETTRUST NIGERIA is developed by ABSADIK TECH and prepared by Abubakar Isah Shuaibu. The project is being built in stages, beginning with this website foundation before any module tools are implemented.</p>
+        <p>The build follows a deliberately simple technical approach: HTML5, CSS3 and vanilla JavaScript only, so the site can be hosted as a static website and maintained without a backend, database or paid services.</p>
+        <p class="st">Note: no partnerships, endorsements, certifications or testimonials are claimed anywhere on this page.</p>
+      </div>
+      <div class="card">
+        <h3>Project facts</h3>
+        <ul class="facts">
+          <li><span class="k">Project</span><span class="v">ABSADIK NETTRUST NIGERIA</span></li>
+          <li><span class="k">Developer</span><span class="v">ABSADIK TECH</span></li>
+          <li><span class="k">Project preparer</span><span class="v">Abubakar Isah Shuaibu</span></li>
+          <li><span class="k">Current stage</span><span class="v">Stage 1 — website foundation</span></li>
+          <li><span class="k">Technology</span><span class="v">HTML5, CSS3, vanilla JavaScript</span></li>
+          <li><span class="k">Hosting target</span><span class="v">Static hosting (GitHub Pages)</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <p class="ftitle">ABSADIK NETTRUST NIGERIA</p>
+        <p>Building a safer, more inclusive and trustworthy internet for young Nigerians. A Stage 1 static prototype developed by ABSADIK TECH.</p>
+        <p>No personal information is collected on this website. No accounts, forms or tracking are used.</p>
+      </div>
+      <div>
+        <p class="ftitle">Modules (planned)</p>
+        <ul class="flinks">
+          <li><a href="#module-ai">AI Opportunity &amp; Ownership Lab</a></li>
+          <li><a href="#module-creator">Creator Rights &amp; Protection Lab</a></li>
+          <li><a href="#module-access">Internet Affordability &amp; Access Lab</a></li>
+          <li><a href="#module-governance">Youth Internet Governance Lab</a></li>
+          <li><a href="#module-safety">Cybersecurity &amp; Online Safety Centre</a></li>
+          <li><a href="#module-skills">Digital Skills Academy</a></li>
+          <li><a href="#module-observatory">Youth Internet Observatory</a></li>
+          <li><a href="#module-hub">Innovation &amp; Collaboration Hub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>&copy; <span id="yr">2025</span> ABSADIK TECH · ABSADIK NETTRUST NIGERIA</p>
+      <p><a href="#home">Back to top</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var nav=document.getElementById("nav"),tgl=document.getElementById("tgl");
+  function setOpen(o){nav.classList.toggle("open",o);tgl.setAttribute("aria-expanded",o?"true":"false");}
+  if(nav&&tgl){
+    tgl.addEventListener("click",function(){setOpen(!nav.classList.contains("open"));});
+    nav.addEventListener("click",function(e){if(e.target.closest("a"))setOpen(false);});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){setOpen(false);tgl.focus();}});
+    window.addEventListener("resize",function(){if(window.innerWidth>900&&nav.classList.contains("open"))setOpen(false);});
+  }
+  var links=[].slice.call(document.querySelectorAll('.nav a[href^="#"]')),map={};
+  links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(en.isIntersecting){var l=map[en.target.id];if(l){links.forEach(function(x){x.removeAttribute("aria-current");});l.setAttribute("aria-current","true");}}
+      });
+    },{rootMargin:"-45% 0px -50% 0px",threshold:0});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s);});
+  }
+  var yr=document.getElementById("yr"),cy=new Date().getFullYear();
+  if(yr&&cy>2025)yr.textContent=String(cy);
+})();
+</script>
+</body>
+</html>
+```
